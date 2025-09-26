@@ -1,9 +1,11 @@
-## What it does
-Operators: `+  -  *  /`
-Uses `strtol` and stops on invalid data
-Prints errors for bad pattern, bad number, bad operator, and division by zero
+# README
 
----
+String length counter.
+
+
+## What it does
+
+Takes several strings as arguments, prints each string with its length, then prints the total character count.
 
 ## How it works
 
@@ -19,18 +21,22 @@ Prints errors for bad pattern, bad number, bad operator, and division by zero
 ## Build
 
 ```bash
-gcc calc.c -o calc
+gcc 4i1.c -o 4i.o
 
 Examples
-    ./3i2 10 + 5 + 4 + 5 - 2 + 5 - 2
-    Output: Result: 25
+    ./4i1.o yo baranka gnu
+    Output: 
+        yo: 2
+        baranka: 7
+        gnu: 3
+        Total: 12
 
 
 
 Photo
-[image info](scary_hw/3zadanije/3i2/photo/gcc.png) Build
+[image info](scary_hw/4zadanija/4i1/photo/gcc.png) Build
 
-[image info](scary_hw/3zadanije/3i2/photo/start.png) Start
+[image info](scary_hw/4zadanija/4i1/photo/start.png) Start
 
 
 
