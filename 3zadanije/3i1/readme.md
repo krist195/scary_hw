@@ -1,3 +1,36 @@
-En standardregnemaskine, der fungerer på basis af et indeks og en switch-case; hvis det andet symbol (dvs. +-/*) er lig med tegnet, bruger den det til at kombinere to variabler (variablerne a og b).
-a = 1 ciffer
-b = 2 cifre
+## What it does
+Operators: `+  -  *`  
+`/` is not implemented here (will print “Unknown operator”).
+
+---
+
+## Build
+
+```bash
+gcc 3i1.c -o 3i1
+
+
+
+How it works 
+	checks there are exactly 3 args (plus program name)
+	converts argv[1] and argv[3] to int with atoi
+	takes argv[2][0] as operator
+	switch does +, -, *
+	prints Result: <number>
+
+Examples
+    ./3i1 10 + 5
+    Output: Result: 15
+
+
+
+Photo
+[image info](photo/gcc.png) Build
+
+[image info](photo/start.png) Start
+
+
+
+
+
+
