@@ -11,14 +11,15 @@ gcc 3i1.c -o 3i1
 
 
 
-How it works 
+## How it works
+
 	checks there are exactly 3 args (plus program name)
 	converts argv[1] and argv[3] to int with atoi
 	takes argv[2][0] as operator
 	switch does +, -, *
 	prints Result: <number>
 
-Examples
+## Examples
     ./3i1 10 + 5
     Output: Result: 15
 
