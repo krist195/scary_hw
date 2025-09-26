@@ -35,9 +35,9 @@ Examples
 
 Photo
 
-[image info](4zadanija/4i1/photo/gcc.png) Build
+[image info](photo/gcc.png) Build
 
-[image info](4zadanija/4i1/photo/start.png) Start
+[image info](photo/start.png) Start
 
 
 
