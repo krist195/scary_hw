@@ -31,7 +31,7 @@ Examples
         gnu: 3
         Total: 12
 
-
+```
 
 Photo
 [image info](scary_hw/4zadanija/4i1/photo/gcc.png) Build
