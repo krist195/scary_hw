@@ -34,9 +34,10 @@ Examples
 ```
 
 Photo
-[image info](scary_hw/4zadanija/4i1/photo/gcc.png) Build
 
-[image info](scary_hw/4zadanija/4i1/photo/start.png) Start
+[image info](4zadanija/4i1/photo/gcc.png) Build
+
+[image info](4zadanija/4i1/photo/start.png) Start
 
 
 
