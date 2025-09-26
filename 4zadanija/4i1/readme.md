@@ -7,14 +7,14 @@ String length counter.
 
 Takes several strings as arguments, prints each string with its length, then prints the total character count.
 
+
 ## How it works
 
-1) Checks there is at least one argument and that the total count (without the program name) is **odd**: `1, 3, 5, ...`.  
-2) Parses the first number as the initial result.  
-3) Walks through pairs: **operator** then **number**.  
-4) Validates the operator is a single char from `+-*/`.  
-5) Parses the next number and applies the operation to the running result.  
-6) Prints `Res: <value>` at the end.
+1. Checks that at least one string is provided.
+2. For each `argv[i]` (starting from `i = 1`) calls `strlen` to get its length.
+3. Prints `<string>: <length>` for each item.
+4. Sums all lengths into `total` and prints `Total: <sum>`.
+
 
 
 

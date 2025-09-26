@@ -28,9 +28,9 @@ Examples
 
 
 Photo
-[image info](scary_hw/3zadanije/3i2/photo/gcc.png) Build
+[image info](photo/gcc.png) Build
 
-[image info](scary_hw/3zadanije/3i2/photo/start.png) Start
+[image info](photo/start.png) Start
 
 
 
