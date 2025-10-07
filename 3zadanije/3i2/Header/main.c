@@ -1,58 +1,54 @@
-#include <stdlib.h>            // strtol
-#include "math_operations.h"
-#include "print_operations.h"
+#include <stdio.h>
+#include "parse.h"
+#include "math_ops.h"
+#include "print_ops.h"
 
-int main(int argc, char *argv[]) {
-    if (argc < 2) {
+int main(int argc,char *argv[]){
+    if(argc<2){
         print_usage(argv[0]);
         return 1;
     }
 
-    if (((argc - 1) % 2) == 0) {
-        print_pattern_error();
+    if(((argc-1)%2)==0){
+        printf("pattern must be <number> <operator> <number> ...\n");
         return 1;
     }
 
-    char *end = 0;
-    long result = strtol(argv[1], &end, 10);
-    if (*end != '\0') {
+    long result=0;
+    long v=0;
+
+    if(!parse_num(argv[1],&v)){
         print_invalid_number(argv[1]);
         return 1;
     }
+    result=v;
 
-    for (int i = 2; i < argc; i += 2) {
-        char *tok = argv[i];
-        char op = tok[0];
+    for(int i=2;i<argc;i+=2){
+        char *tok=argv[i];
+        char op=read_op(tok);
 
-        if (tok[1] != '\0') {
-            print_operator_not_single(tok);
+        if(op=='\0'){
+            print_op_not_single(tok);
             return 1;
         }
 
-        if (!is_supported_operator(op)) {
-            print_invalid_operator_char(op);
+        if(!is_op(op)){
+            print_invalid_operator(op);
             return 1;
         }
 
-        end = 0;
-        long rhs = strtol(argv[i + 1], &end, 10);
-        if (*end != '\0') {
-            print_invalid_number(argv[i + 1]);
+        if(!parse_num(argv[i+1],&v)){
+            print_invalid_number(argv[i+1]);
             return 1;
         }
 
-        if (op == '+') {
-            result = addl(result, rhs);
-        } else if (op == '-') {
-            result = subl(result, rhs);
-        } else if (op == '*') {
-            result = mull(result, rhs);
-        } else { // '/'
-            if (rhs == 0) {
-                print_division_by_zero();
-                return 1;
-            }
-            result = divl(result, rhs);
+        int st=apply(&result,op,v);
+        if(st==2){
+            print_division_by_zero();
+            return 1;
+        }else if(st!=0){
+            print_invalid_operator(op);
+            return 1;
         }
     }
 

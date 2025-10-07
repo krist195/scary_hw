@@ -1,0 +1,1 @@
+int contains_icase(const char *text,const char *word);

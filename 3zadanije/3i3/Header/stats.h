@@ -1,10 +1,10 @@
-struct Stats {
+typedef struct{
     long sum;
     long min;
     long max;
-    int  count;
-};
+    int count;
+}Stats;
 
-void stats_init(struct Stats *s);
-void stats_add(struct Stats *s, long val);
-double stats_avg(const struct Stats *s);
+void stats_init(Stats *s);
+void stats_add(Stats *s,long v);
+double stats_avg(Stats *s);

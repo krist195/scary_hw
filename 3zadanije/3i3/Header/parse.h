@@ -1,0 +1,1 @@
+int parse_num(const char *s,long *out);

@@ -8,8 +8,3 @@ int parse_num(const char *s,long *out){
     *out=v;
     return 1;
 }
-
-char read_op(const char *s){
-    if(s[0]!='\0'&&s[1]=='\0')return s[0];
-    return '\0';
-}
