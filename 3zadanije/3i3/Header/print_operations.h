@@ -7,3 +7,4 @@ void print_sum(long sum);
 void print_avg(double avg);
 void print_min(long min);
 void print_max(long max);
+

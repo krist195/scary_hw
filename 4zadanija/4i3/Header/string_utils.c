@@ -8,7 +8,7 @@ char to_lower_char(char c) {
 }
 
 int contains_icase(const char *text, const char *word) {
-    // пустое слово считаем "не матчем" — как и в main
+
     if (!word || word[0] == '\0') return 0;
 
     for (int pos = 0; text[pos] != '\0'; pos++) {
